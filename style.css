@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #dbeafe;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.member-card {
+    width: 230px;
+    background: white;
+    border-radius: 18px;
+    padding: 25px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+}
+
+.member-card.available {
+    border-top: 8px solid #22c55e;
+}
+
+.member-card.unavailable {
+    border-top: 8px solid #ef4444;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    background: #243b55;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.role {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.status {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+button {
+    background: #243b55;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #141e30;
+}

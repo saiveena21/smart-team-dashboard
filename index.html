@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Availability Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>👥 Team Availability Tracker</h1>
+        <p class="subtitle">Manage and monitor team availability in real time</p>
+
+        <div class="team-grid">
+            {% for member in members %}
+
+            <div class="member-card {% if member[3] == 1 %}available{% else %}unavailable{% endif %}">
+
+                <div class="avatar">
+                    {{ member[1][0] }}
+                </div>
+
+                <h2>{{ member[1] }}</h2>
+                <p class="role">{{ member[2] }}</p>
+
+                {% if member[3] == 1 %}
+                    <p class="status">🟢 Available</p>
+                {% else %}
+                    <p class="status">🔴 Not Available</p>
+                {% endif %}
+
+                <a href="/toggle/{{ member[0] }}">
+                    <button>
+                        Change Status
+                    </button>
+                </a>
+
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
